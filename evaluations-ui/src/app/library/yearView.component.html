@@ -1,0 +1,7 @@
+<div class="yearSwitch" *ngIf="whenLoggedIn()">
+    <i class="material-icons yearSwitchContent yearArrow" (click)="selectYear(-1, $event)" *ngIf="isCurrentYear()">skip_previous</i>
+    <i class="yearSwitchContent">{{activeYear}}</i>
+    <i class="material-icons yearSwitchContent yearArrow" (click)="selectYear(1,$event)" *ngIf="!isCurrentYear()">skip_next</i>
+</div>
+
+<!-- This is commented because the yearSwitch shouldn't be active yet. We don't need the data from 2017 since there is none. -->

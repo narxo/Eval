@@ -1,0 +1,137 @@
+import com.bmuschko.gradle.cargo.tasks.remote.CargoDeployRemote
+import com.bmuschko.gradle.cargo.tasks.remote.CargoRedeployRemote
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.5.6.RELEASE"
+    }
+}
+
+plugins {
+    id "org.flywaydb.flyway" version "4.2.0"
+    id 'com.bmuschko.cargo' version '2.2.3'
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'war'
+apply plugin: 'jacoco'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+test{
+    systemProperties = System.properties
+    systemProperties['user.dir'] = workingDir
+}
+bootRun{
+    systemProperties = System.properties
+    systemProperty "spring.profiles.active", "dev"
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            element = 'CLASS'
+            includes = ['com.cegeka.evaluations.domain.*', 'com.cegeka.evaluations.application.*']
+            limit {
+                counter = 'BRANCH'
+                minimum = 0.7
+            }
+        }
+        rule {
+            element = 'PACKAGE'
+            includes = ['com.cegeka.evaluations.domain.*', 'com.cegeka.evaluations.application.*']
+            limit {
+                counter = 'COMPLEXITY'
+                minimum = 0.5
+            }
+        }
+    }
+}
+
+configurations {
+    providedRuntime
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('org.flywaydb:flyway-core:4.2.0')
+    compile('org.springframework.security:spring-security-config')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile("com.h2database:h2")
+    compile("org.springframework.security:spring-security-ldap")
+    compile('mysql:mysql-connector-java')
+    compile('org.springframework.security:spring-security-web')
+    compile('com.google.guava:guava-collections:r03')
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile("org.springframework.ldap:spring-ldap-core")
+    compile("org.springframework:spring-tx")
+    compile("com.unboundid:unboundid-ldapsdk")
+
+    testCompile("org.springframework.security:spring-security-test")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+}
+
+war {
+    baseName = 'evaluations-rest'
+    archiveName = 'evaluations-rest.war'
+}
+
+flyway {
+    driver = 'com.mysql.jdbc.Driver'
+    url = 'jdbc:mysql://localhost:3306/evaluations-dev'
+    user = 'bib'
+    password ='password'
+}
+
+cargo {
+    containerId = 'tomcat8x'
+    port = 8002
+
+    remote {
+        hostname = 'localhost'
+        username = 'manager'
+        password = 'AK3SRU0C7102'
+    }
+
+    deployable {
+        context = 'evaluations/api'
+    }
+}
+
+cargoDeployRemote.dependsOn build
+cargoRedeployRemote.dependsOn build
+
+task cargoDeployRemoteTest(type: CargoDeployRemote) {
+    group = 'evaluations-ui'
+    port = 8001
+}
+
+task cargoDeployRemoteProduction(type: CargoDeployRemote) {
+    group = 'evaluations-ui'
+    port = 8003
+}
+
+task cargoRedeployRemoteTest(type: CargoRedeployRemote) {
+    group = 'evaluations-ui'
+    port = 8001
+}
+
+task cargoRedeployRemoteProduction(type: CargoRedeployRemote) {
+    group = 'evaluations-ui'
+    port = 8003
+}

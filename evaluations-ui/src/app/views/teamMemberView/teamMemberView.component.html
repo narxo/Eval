@@ -1,0 +1,22 @@
+<mat-expansion-panel *ngIf="teamMember.role !== 'Employee'" (click)="viewLoader(teamMember, $event)">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <span class="accent-color">
+        <font size="4.5">{{teamMember.firstName + ' ' + teamMember.lastName}}</font>
+      </span>
+    </mat-panel-title>
+    <mat-panel-description>
+      <stampcard *ngIf="teamMember.role !== 'ASFLead' && teamMember.managerUserName!==null" [stampCardUser]="teamMember"></stampcard>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <mat-expansion-panel-content *ngFor="let employee of _employeeList; let employeeInd=index">
+    <teamMemberView [teamMember]='employee'></teamMemberView>
+  </mat-expansion-panel-content>
+</mat-expansion-panel>
+<mat-card *ngIf="teamMember.role === 'Employee'" class="background-accent-color body-margin">
+  <span class="accent-color">
+    <font size="3.5">{{teamMember.firstName + " " + teamMember.lastName}}</font>
+  </span>
+  <stampcard [stampCardUser]="teamMember"></stampcard>
+  <br>
+</mat-card>

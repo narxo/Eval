@@ -1,0 +1,3 @@
+rootProject.name = 'Evaluations'
+include 'evaluations-rest',
+        'evaluations-ui'

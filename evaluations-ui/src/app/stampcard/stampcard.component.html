@@ -1,0 +1,44 @@
+<div class="stampcardContainer" cols="15" rowHeight="2:2">
+
+    <div *ngFor="let stampcardPeriod of stampcard; let i=index" (click)="stampcardPeriodClicked(i,$event)" [ngClass]="evaluationPeriodState(stampcardPeriod)"
+        class="tile">
+
+        <div matTooltip="Click for more info" *ngIf="qscoreEntry(stampcardPeriod)" class="div1 qscore" 
+        (click)="openDialog(i,stampcardPeriod.managerName, stampcardPeriod.employeeName, stampcardPeriod.comment, stampcardPeriod.value)">
+            <div class="tileHeader">
+                <div class="tileHeadertext"> SCORE </div>
+            </div>
+            <i *ngIf="qscoreEntry(stampcardPeriod)" class="qscorePeriod">
+                <br> {{stampcardPeriod.value}}
+                <br> 
+            </i>
+        </div>
+
+        <div *ngIf="!qscoreEntry(stampcardPeriod)" class="div1 agreements">
+            <div class="tileHeader">
+                <div class="tileHeadertext"> {{stampcardPeriod.period}} </div>
+            </div>
+
+            <i *ngIf="futureAgreement(stampcardPeriod)" class="material-icons">
+                <br>
+            </i>
+            <i *ngIf="confirmedByNone(stampcardPeriod)" class="material-icons">
+                <br>close</i>
+            <i *ngIf="confirmedByOne(stampcardPeriod)" class="material-icons">
+                <br>hourglass_empty</i>
+            <i *ngIf="confirmedByTwo(stampcardPeriod)" class="material-icons">
+                <br>done</i>
+
+        </div>
+        <div class="div2">
+
+            <div *ngIf="futureAgreement(stampcardPeriod) || confirmedByNone(stampcardPeriod) ||
+                        confirmedByOne(stampcardPeriod) || confirmedByTwo(stampcardPeriod)" class="yearoverviewcontent">
+                <div class="hovercontent">
+                    <p>{{stampcardPeriod.employeeName}} -- {{evaluationText(stampcardPeriod.evalueeConfirmed)}}
+                        <br> {{stampcardPeriod.managerName}} -- {{evaluationText(stampcardPeriod.evaluatorConfirmed)}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

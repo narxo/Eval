@@ -1,0 +1,71 @@
+import com.bmuschko.gradle.cargo.tasks.remote.CargoDeployRemote
+import com.bmuschko.gradle.cargo.tasks.remote.CargoRedeployRemote
+
+plugins {
+  id 'java'
+  id 'war'
+  id 'com.moowork.node' version '1.1.1'
+  id 'com.bmuschko.cargo' version '2.2.3'
+  id 'maven-publish'
+}
+
+repositories {
+  mavenCentral()
+}
+
+war {
+  archiveName = 'evaluations-ui.war'
+  from 'dist'
+}
+
+cargo {
+  containerId = 'tomcat8x'
+  port = 8002
+
+  remote {
+    hostname = 'localhost'
+    username = 'manager'
+    password = 'AK3SRU0C7102'
+  }
+
+  deployable {
+    context = 'evaluations'
+  }
+}
+
+cargoDeployRemote.dependsOn build
+cargoRedeployRemote.dependsOn build
+
+task ngBuild(type: NpmTask) {
+  group = 'evaluations-ui'
+  args = ['run', 'buildProd']
+}
+
+task ngStart(type: NpmTask) {
+  group = 'evaluations-ui'
+  args = ['run', 'start']
+}
+
+ngBuild.dependsOn npmInstall
+war.dependsOn ngBuild
+
+task cargoDeployRemoteTest(type: CargoDeployRemote) {
+  group = 'evaluations-ui'
+  port = 8001
+}
+
+task cargoDeployRemoteProduction(type: CargoDeployRemote) {
+  group = 'evaluations-ui'
+  port = 8003
+}
+
+task cargoRedeployRemoteTest(type: CargoRedeployRemote) {
+  group = 'evaluations-ui'
+  port = 8001
+}
+
+task cargoRedeployRemoteProduction(type: CargoRedeployRemote) {
+  group = 'evaluations-ui'
+  port = 8003
+}
+

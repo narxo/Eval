@@ -1,0 +1,318 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/icon?family=Roboto');
+
+@import './themefile.css';
+
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  background-color: #F4F4F4!important;
+}
+
+.matTooltip{
+  white-space: pre-line;
+}
+
+.mat-input-element{
+  height: 45vh;
+}
+.mat-form-field-underline .mat-input-underline {
+  background-color:transparent!important;
+}
+
+.mat-raised-button{
+color: black!important;
+}
+
+.mat-form-field{
+  display: block!important;
+}
+
+.mat-dialog-container {
+width: 100%;
+}
+
+.mat-dialog-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-borders {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(174, 174, 174);
+}
+.yearSwitch{
+  text-align: center;
+  align-content: center;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+.yearSwitchContent {
+  flex-wrap: nowrap;
+  align-self: center;
+} 
+
+.yearArrow:hover{
+  cursor: pointer;
+}
+/****************************************************************************************/
+/************************************  STAMPCARD ****************************************/
+/****************************************************************************************/
+
+.stampcardContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tile {
+  height: 80px;
+  text-align: center;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  z-index: 1;
+  margin: 1px;
+  min-width: 5px;
+  overflow: hidden;
+  flex: 1;
+  transition: flex 0.5s ease-in-out;
+}
+ .stampcardContainer:hover .tile{
+  min-width: 5% !important;
+  max-width: 100%;
+}
+
+.hasinfo:hover {
+  filter: brightness(115%);
+  flex: 10;
+}
+
+.futureAgreement {
+  background-color: rgb(160, 160, 160);
+}
+
+.agreementDone {
+  background-color: rgb(112, 177, 112);
+}
+
+.agreementTodo {
+  background-color: #d36969;
+  color: white;
+}
+
+.agreementBusy {
+  background-color: rgb(238, 192, 83);
+  color: white;
+}
+
+.qscorefill {
+  background-color: rgb(90, 90, 90);
+  color: white
+}
+
+.material-icons {
+  line-height: 0.8;
+}
+
+.qscorePeriod {
+  line-height: 0.5;
+}
+
+.div2 {
+  border-left-color: #FFF;
+  border-left-style: dotted;
+  border-left-width: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+}
+
+/************************************  yearblockoverview ****************************************/
+
+.expansion-panel__content {
+  margin-left: 0%!important;
+}
+
+.div1 {
+  padding-top: 10px;
+  min-width: 100%;
+}
+
+.hasinfo:hover .div1 {
+  min-width: 15%;
+}
+
+.hasinfo:hover .hovercontent {
+  display: block;
+}
+
+/* .tile:hover .yearoverviewcontent {
+    display: flex;
+    position: relative;
+    text-align: left;
+    font-weight: normal;
+    padding: 0.5em;
+    z-index: 999999999 !important;
+    background-color: #ffffff;
+    border: 1px solid #b1b1b1;
+    visibility: visible !important;
+    opacity: 1;
+} */
+
+.hovercontent {
+  display: none;
+  min-height: 25px;
+  z-index: 220;
+  color: white;
+}
+
+.yearoverviewcontent {
+  position: relative;
+  z-index: 100;
+}
+
+/****************************************************************************************/
+
+/****************************************************************************************/
+
+/****************************************************************************************/
+
+hr {
+  height: 1px;
+  background-color: lightgrey;
+  color: lightgrey;
+  border: 0 none;
+  margin: 5px auto;
+}
+
+.mat-expansion-panel-header {
+  height: 100% !important;
+  margin-left: 0px!important;
+  margin-right: 0px;
+  margin-top: 1em;
+  padding: 24px !important;
+}
+
+.mat-content {
+  display: block !important;
+  background-color: white;
+}
+
+.mat-expansion-panel-header-description {
+  display: block !important;
+  flex-basis: 100%;
+
+}
+
+.mat-expansion-panel-header-title {
+  display: block !important;
+  flex-grow: 0!important;
+  width: 15%;
+}
+
+.mat-expansion-panel{
+  margin-left: 0px!important;
+  background-color: white;
+}
+
+.primary-color {
+  color: #0D435A!important;
+}
+
+.accent-color {
+  color: #62A5C1!important;
+}
+
+.background-primary-color {
+  background-color: #0D435A!important;
+}
+
+.background-accent-color {
+  background-color: white;
+}
+
+.white-background {
+  background-color: white!important;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.white-text {
+  color: #FFF!important;
+}
+
+.spacer {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+/* 
+.body-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+} */
+
+.large {
+  font-size: 50px;
+}
+
+.logoset {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+md-grid-tile:hover {
+  background-color: #FFD54F;
+}
+
+.mat-grid-tile .mat-grid-tile-header {
+  background: transparent!important;
+}
+
+.mat-figure {
+  color: #3A3A3A!important;
+}
+
+.mat-grid-tile-header {
+  color: #3A3A3A!important;
+}
+
+.mat-grid-tile .our-own-mat-grid-list-text {
+  display: flex!important;
+  flex-direction: column!important;
+  width: 100%!important;
+  box-sizing: border-box!important;
+  overflow: hidden!important;
+  text-align: center!important;
+  position: relative;
+}
+
+.mat-card {
+  margin-left: 0px!important;
+  margin-right: 0px;
+  margin-top: 1em;
+  background-color: white;
+  height: 100%
+}
+
+#mainMatCard{
+  margin-left: 0px;
+}
+
+.mat-grid-tile:hover {
+  background: orange;
+}
+
+.wraparound{
+  margin-left: 20px;
+  margin-right: 20px;
+}

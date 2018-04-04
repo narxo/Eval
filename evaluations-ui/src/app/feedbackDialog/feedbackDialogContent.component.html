@@ -1,0 +1,44 @@
+<h2 mat-dialog-title>
+    <div StampcardUser=""></div>
+</h2>
+
+<h2>Score</h2>
+
+
+<div *ngIf="data.isManager">
+<mat-form-field>
+    <mat-select placeholder="Select score" [(value)]="data.score">
+        <mat-option value="1">1</mat-option>
+        <mat-option value="2">2</mat-option>
+        <mat-option value="3">3</mat-option>
+        <mat-option value="4">4</mat-option>
+        <mat-option value="5">5</mat-option>
+    </mat-select>
+</mat-form-field>
+</div>
+
+<div *ngIf="!data.isManager">
+  <h4>Score:</h4>
+     {{data.score}}
+</div>
+
+<br>
+<br>
+
+<div *ngIf="data.isManager">
+<mat-form-field>
+    <textarea [(ngModel)]="data.comment" maxlength="5000" matInput placeholder="Feedback"></textarea>
+    <mat-hint *ngIf="data.comment!==null" align="end">{{5000 - data.comment.length}} characters remaining</mat-hint>
+</mat-form-field>
+</div>
+<div *ngIf="!data.isManager">
+    
+     <h4>Feedback:</h4> 
+      <p>{{data.comment}}</p>
+    <br>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="onCancel()">Close</button>
+    <button *ngIf="data.isManager" mat-raised-button [mat-dialog-close] (click)="onSubmit(data.userName, data.period, data.evaluator, data.evaluee, data.comment, data.score)">Submit</button>
+</div>

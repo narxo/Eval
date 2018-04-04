@@ -1,0 +1,9 @@
+<div *ngIf="_role === 'ASFLead'">
+  <button mat-raised-button class="asf-button" (click)="redirect()">Consolidation View</button>
+</div>
+<mat-card class="background-accent-color body-margin">
+  <div class="white-background" *ngFor="let teamMember of _teamMembersList; let ind=index">
+    <teamMemberView [teamMember]="teamMember"></teamMemberView>
+    <br>
+  </div>
+</mat-card>

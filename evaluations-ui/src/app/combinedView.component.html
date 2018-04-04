@@ -1,0 +1,18 @@
+<!-- shows active year -->
+<yearViewComponent (nextYear)="getNextYear($event)"></yearViewComponent>
+<!-- shows employee stampcard except for asfLead -->
+<div *ngIf="whenLoggedIn()">
+        <mat-card class="background-accent-color body-margin">
+            <mat-card-title class="primary-color">
+                <font size="6.5">Personal evaluation calendar</font>
+            </mat-card-title>
+            <br>
+            <mat-card-content class="white-background">
+                <span class="accent-color"><font size="4.5">{{_loggedInName}}</font></span>
+                <br>
+                <stampcard *ngIf="_employeeLoggedInUser && _employeeLoggedInUser.managerUserName !== null" [stampCardUser]="_employeeLoggedInUser"></stampcard>
+            </mat-card-content>
+        </mat-card>
+        </div> 
+<!-- shows team view depending on role -->
+<router-outlet *ngIf="_role !== 'Employee'"></router-outlet>

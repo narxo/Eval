@@ -1,0 +1,370 @@
+dn: dc=springframework,dc=org
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: springframework
+
+dn: ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=TeamMember1,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember1
+sn: TeamMember1
+uid: TeamMember1
+userPassword: pass
+
+dn: uid=TeamMember2,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember2
+sn: TeamMember2
+uid: TeamMember2
+userPassword: pass
+
+dn: uid=TeamMember3,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember3
+sn: TeamMember3
+uid: TeamMember3
+userPassword: pass
+
+dn: uid=TeamMember4,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember4
+sn: TeamMember4
+uid: TeamMember4
+userPassword: pass
+
+dn: uid=TeamMember5,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember5
+sn: TeamMember5
+uid: TeamMember5
+userPassword: pass
+
+dn: uid=TeamMember6,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember6
+sn: TeamMember6
+uid: TeamMember6
+userPassword: pass
+
+dn: uid=TeamMember7,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember7
+sn: TeamMember7
+uid: TeamMember7
+userPassword: pass
+
+dn: uid=TeamMember8,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember8
+sn: TeamMember8
+uid: TeamMember8
+userPassword: pass
+
+dn: uid=TeamMember9,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember9
+sn: TeamMember9
+uid: TeamMember9
+userPassword: pass
+
+dn: uid=TeamMember10,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember10
+sn: TeamMember10
+uid: TeamMember10
+userPassword: pass
+
+dn: uid=TeamMember11,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember11
+sn: TeamMember11
+uid: TeamMember11
+userPassword: pass
+
+dn: uid=TeamMember12,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember12
+sn: TeamMember12
+uid: TeamMember12
+userPassword: pass
+
+dn: uid=TeamMember13,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember13
+sn: TeamMember13
+uid: TeamMember13
+userPassword: pass
+
+dn: uid=TeamMember14,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember14
+sn: TeamMember14
+uid: TeamMember14
+userPassword: pass
+
+dn: uid=TeamMember15,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember15
+sn: TeamMember15
+uid: TeamMember15
+userPassword: pass
+
+dn: uid=TeamMember16,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember16
+sn: TeamMember16
+uid: TeamMember16
+userPassword: pass
+
+dn: uid=TeamMember17,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember17
+sn: TeamMember17
+uid: TeamMember17
+userPassword: pass
+
+dn: uid=TeamMember18,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember18
+sn: TeamMember18
+uid: TeamMember18
+userPassword: pass
+
+dn: uid=TeamMember19,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember19
+sn: TeamMember19
+uid: TeamMember19
+userPassword: pass
+
+dn: uid=TeamMember20,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TeamMember20
+sn: TeamMember20
+uid: TeamMember20
+userPassword: pass
+
+dn: uid=PeopleManager1,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: PeopleManager1
+sn: PeopleManager1
+uid: PeopleManager1
+userPassword: pass
+
+dn: uid=PeopleManager2,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: PeopleManager2
+sn: PeopleManager2
+uid: PeopleManager2
+userPassword: pass
+
+dn: uid=PeopleManager3,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: PeopleManager3
+sn: PeopleManager3
+uid: PeopleManager3
+userPassword: pass
+
+dn: uid=PeopleManager4,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: PeopleManager4
+sn: PeopleManager4
+uid: PeopleManager4
+userPassword: pass
+
+dn: uid=PeopleManager5,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: PeopleManager5
+sn: PeopleManager5
+uid: PeopleManager5
+userPassword: pass
+
+dn: uid=PeopleManager6,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: PeopleManager6
+sn: PeopleManager6
+uid: PeopleManager6
+userPassword: pass
+
+dn: uid=PeopleManager7,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: PeopleManager7
+sn: PeopleManager7
+uid: PeopleManager7
+userPassword: pass
+
+dn: uid=PortfolioManager1,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: PortfolioManager1
+sn: PortfolioManager1
+uid: PortfolioManager1
+userPassword: pass
+
+dn: uid=PortfolioManager2,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: PortfolioManager2
+sn: PortfolioManager2
+uid: PortfolioManager2
+userPassword: pass
+
+dn: uid=PortfolioManager3,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: PortfolioManager3
+sn: PortfolioManager3
+uid: PortfolioManager3
+userPassword: pass
+
+dn: uid=PortfolioManager4,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: PortfolioManager4
+sn: PortfolioManager4
+uid: PortfolioManager4
+userPassword: pass
+
+dn: uid=AsfLead,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: AsfLead
+sn: AsfLead
+uid: AsfLead
+userPassword: pass
+
+dn: uid=BKKVA,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Van de Vonder Katrien
+sn: Van de Vonder
+uid: BKKVA
+userPassword: pass
+
+dn: uid=tomdu,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Dufour Tom
+sn: Dufour
+uid: tomdu
+userPassword: pass
+
+dn: uid=wardb,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Bryon Ward
+sn: Bryon
+uid: wardb
+userPassword: pass
+
+dn: uid=jurgeng,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Geys Jurgen
+sn: Geys
+uid: jurgeng
+userPassword: pass
